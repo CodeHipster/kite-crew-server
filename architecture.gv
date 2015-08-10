@@ -1,0 +1,95 @@
+ dot language only works with nodes that can connect to other nodes or a cluster of another node.
+ This maps to files. Where files link to clusters
+ 
+ could work for structs and functions?
+ 
+ want to visualize package dependencies
+ 
+ want to visualize structs and what functions they have and their usage by other files.?
+ 
+digraph GoProject {
+	node [
+			fontname = "Bitstream Vera Sans"
+			fontsize = 8
+			shape = "record"
+	]
+
+	package1_name [
+		label = "package1_name|file1_name\nfile2_name\nfile3_name";
+	]
+	
+	package2_name [
+		label = "package2_name|file1_name\nfile2_name\nfile3_name";
+	]
+	
+	package2_name -> package1_name
+ }
+  
+ 
+ 
+ UML style for showing structs and related methods.
+ graph GoProject {
+	node [
+			fontname = "Bitstream Vera Sans"
+			fontsize = 8
+			shape = "record"
+	]
+
+	struct1_name [
+		label = "struct1_name|field1_name\nfield2_name\nfield3_name\nfield3_name|function1_name\nfunction2_name";
+	]
+	
+	struct2_name [
+		label = "struct2_name|field1_name\nfield2_name\nfield3_name\nfield3_name|function1_name\nfunction2_name";
+	]
+
+	struct3_name [
+		label = "struct1_name|field1_name\nfield2_name\nfield3_name\nfield3_name|function1_name\nfunction2_name";
+	]
+	
+	struct4_name [
+		label = "struct2_name|field1_name\nfield2_name\nfield3_name\nfield3_name|function1_name\nfunction2_name";
+	]
+
+	struct5_name [
+		label = "struct1_name|field1_name\nfield2_name\nfield3_name\nfield3_name|function1_name\nfunction2_name";
+	]
+	
+	struct6_name [
+		label = "struct2_name|field1_name\nfield2_name\nfield3_name\nfield3_name|function1_name\nfunction2_name";
+	]
+	
+ }
+ 
+ graph GoProject {
+	node [
+			fontname = "Bitstream Vera Sans"
+			fontsize = 8
+			shape = "record"
+	]
+
+	struct1_name [
+		label = "struct1_name|field1_name\lfield2_name\lfield3_name\lfield3_name|function1_name\lfunction2_name";
+	]
+	
+	struct2_name [
+		label = "struct2_name|field1_name\nfield2_name\nfield3_name\nfield3_name|function1_name\nfunction2_name";
+	]
+
+	struct3_name [
+		label = "struct1_name|field1_name\nfield2_name\nfield3_name\nfield3_name|function1_name\nfunction2_name";
+	]
+	
+	struct4_name [
+		label = "struct2_name|field1_name\nfield2_name\nfield3_name\nfield3_name|function1_name\nfunction2_name";
+	]
+
+	struct5_name [
+		label = "struct1_name|field1_name\nfield2_name\nfield3_name\nfield3_name|function1_name\nfunction2_name";
+	]
+	
+	struct6_name [
+		label = "struct2_name|field1_name\nfield2_name\nfield3_name\nfield3_name|function1_name\nfunction2_name";
+	]
+	
+ }
